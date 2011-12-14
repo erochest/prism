@@ -3,9 +3,11 @@ require 'susy'
 # Require any additional compass plugins here.
 
 project_type = :rails
+project_path = Compass::AppIntegration::Rails.root
 
 # Set this to the root of your project when deployed:
 http_path = "/"
+environment = Compass::AppIntegration::Rails.env
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
