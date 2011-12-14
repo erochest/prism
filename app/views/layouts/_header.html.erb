@@ -4,10 +4,10 @@
 
 <nav role="primary-nav">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/instructions.html">Instructions</a></li>
-    <li><a href="/documents.html">Documents</a></li>
-    <li><a href="/about.html">About</a></li>
+    <li><%= link_to 'Home', :root %></li>
+    <li><%= link_to "Instructions", :controller => "pages", :action => "instructions" %></li>
+    <li><%= link_to "Documents", :controller => "documents", :action => "index" %></li>
+    <li><%= link_to "About", :controller => "pages", :action => "about" %></li>
   </ul>
 </nav>
 

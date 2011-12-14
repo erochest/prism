@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def about
     @title = "About Prism"
   end
+
+  def instructions
+    @title = "Instructions"
+  end
 end
