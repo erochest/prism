@@ -1,0 +1,60 @@
+
+@import "compass";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+@import "compass/utilities/general/float";
+
+$margin: 12pt;
+$heightunit: 24pt;
+
+#replslider {
+  @include background-image(linear-gradient(#fff, #ddd));
+  height: 1em;
+  width: 12em;
+  padding: 2px 20px;
+  border: 1px solid #eee;
+  color: #555;
+}
+
+#repl {
+  @include border-top-right-radius(20px);
+  border: 2px solid #eee;
+  height: 12em;
+  width: 40em;
+  padding: 1em;
+}
+
+#replinput {
+  height: 10em;
+  width: 38em;
+  margin: 1em;
+  font-family: "Inconsolata", sans-serif;
+}
+
+#replbuttons {
+  height: 0pt;
+  position: relative;
+  top: -3.25 * $margin;
+}
+
+#replgo {
+  @include background-image(linear-gradient(#ffc173, #ff8e00 70%, #bf8030));
+  @include border-radius;
+  @include float-right;
+  margin-top: 0.5 * $margin;
+  margin-left: 0.25 * $margin;
+  margin-right: 0.85 * $margin;
+  border: 0pt;
+  width: 45pt;
+  height: 0.75 * $heightunit;
+  cursor: pointer;
+
+  &:hover {
+    @include single-text-shadow(#eee);
+  }
+  &:active {
+    @include background-image(linear-gradient(#bf8030, #ff8e00 70%, #ffc173));
+  }
+}
+
+
