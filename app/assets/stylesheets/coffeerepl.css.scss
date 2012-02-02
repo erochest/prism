@@ -7,6 +7,14 @@
 $margin: 12pt;
 $heightunit: 24pt;
 
+#coffeepanel {
+  &.open {
+    position: fixed;
+    top: auto;
+    bottom: -1em;
+  }
+}
+
 #replslider {
   @include background-image(linear-gradient(#fff, #ddd));
   height: 1em;
@@ -18,6 +26,7 @@ $heightunit: 24pt;
 
 #repl {
   @include border-top-right-radius(20px);
+  background: white;
   border: 2px solid #eee;
   height: 12em;
   width: 40em;
@@ -25,6 +34,7 @@ $heightunit: 24pt;
 }
 
 #replinput {
+  @include float-left;
   height: 10em;
   width: 38em;
   margin: 1em;
@@ -32,6 +42,7 @@ $heightunit: 24pt;
 }
 
 #replbuttons {
+  @include float-right;
   height: 0pt;
   position: relative;
   top: -3.25 * $margin;
@@ -56,5 +67,4 @@ $heightunit: 24pt;
     @include background-image(linear-gradient(#bf8030, #ff8e00 70%, #ffc173));
   }
 }
-
 
