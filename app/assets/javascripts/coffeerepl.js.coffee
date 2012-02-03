@@ -1,29 +1,4 @@
 
-class Toast
-
-  constructor: (@panel, @body, @tab) ->
-    @open = false
-    this.position()
-    $(window).scroll => this.position()
-    @tab.click =>
-      this.toggle()
-      this.position()
-
-  position: ->
-    w = $ window
-    wTop = w.scrollTop()
-    wHeight = w.height()
-    tHeight = @panel.height()
-    top = wHeight + wTop - tHeight
-    fTop = $("footer").position().top
-    @panel.css(
-      position : 'fixed'
-      top      : 'auto'
-      bottom   : '0'
-    )
-
-  toggle: ->
-    @open = not @open
 
 class CoffeeRepl
 
@@ -31,5 +6,10 @@ class CoffeeRepl
 
 
 $ ->
-  # toast = new Toast($("#coffeepanel"), $("#repl"), $("#replslider"))
+  # This was getting registered twice for some reason, so first clear out any
+  # existing handlers before adding this one.
+  $('#replslider')
+    .off('click')
+    .on('click', -> $('#repl').slideToggle())
+  $('#repl').slideUp()
 

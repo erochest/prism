@@ -8,11 +8,9 @@ $margin: 12pt;
 $heightunit: 24pt;
 
 #coffeepanel {
-  &.open {
-    position: fixed;
-    top: auto;
-    bottom: -1em;
-  }
+  position: fixed;
+  top: auto;
+  bottom: 0;
 }
 
 #replslider {
