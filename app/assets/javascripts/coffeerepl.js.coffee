@@ -2,7 +2,20 @@
 
 class CoffeeRepl
 
-  constructor: (@eid) ->
+  constructor: (@input, @button) ->
+    @button.on('click', => this.go(@input.val()))
+
+  go: (code) ->
+    try
+      js = CoffeeScript.compile code
+    catch error
+      # TODO: do something
+      return
+    try
+      eval js
+    catch error
+      # TODO: do something
+      return
 
 
 $ ->
@@ -12,4 +25,6 @@ $ ->
     .off('click')
     .on('click', -> $('#repl').slideToggle())
   $('#repl').slideUp()
+
+  repl = new CoffeeRepl $('#replinput'), $('#replgo')
 
