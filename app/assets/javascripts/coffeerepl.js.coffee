@@ -3,7 +3,8 @@
 class CoffeeRepl
 
   constructor: (@input, @button) ->
-    @button.on('click', => this.go(@input.val()))
+    @button
+      .on('click', => this.go(@input.val()))
 
   go: (code) ->
     try
@@ -26,7 +27,6 @@ $ ->
   # This was getting registered twice for some reason, so first clear out any
   # existing handlers before adding this one.
   $('#replslider')
-    .off('click')
     .on('click', -> $('#repl').slideToggle())
   $('#repl').slideUp()
 
