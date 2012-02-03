@@ -6,4 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require coffee-script-1.2.0.js
+//= require coffeerepl
