@@ -9,13 +9,17 @@ class CoffeeRepl
     try
       js = CoffeeScript.compile code
     catch error
-      # TODO: do something
+      this.error error
       return
     try
       eval js
     catch error
-      # TODO: do something
+      this.error error
       return
+
+  error: (err) ->
+    msg = if err.message? then err.message else "ERROR"
+    alert msg
 
 
 $ ->
