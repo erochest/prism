@@ -8,3 +8,4 @@
 //= require jquery_ujs
 //= require coffee-script-1.2.0.js
 //= require coffeerepl
+//= require documents
